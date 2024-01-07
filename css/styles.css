@@ -28,6 +28,7 @@ a {
 
 img {
   display: block;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -282,7 +283,7 @@ span {
 }
 
 .taste-titel-mini {
-  color: #111;
+  
   font-size: 14px;
   font-weight: 600;
   line-height: 1.28;
@@ -292,20 +293,22 @@ span {
   padding-left: 5px;
 }
 
-.taste-titel-mini:nth-child(2n + 1) {
-  color: FFF;
+.taste-list:nth-last-child(odd){
+  color: #FFF;
 }
 .taste-img {
   margin: 0 auto 36px;
 }
 .taste-list:nth-child(4n + 1) {
   background-color: #fd9222;
+  
 }
 .taste-list:nth-child(4n + 2) {
   background-color: #fff;
 }
 .taste-list:nth-child(4n + 3) {
   background-color: #1e1823;
+  
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -469,8 +472,12 @@ display: flex;
         border-left: 1px solid rgba(17, 17, 17, 0.10);
         background: #FFF;
 
-    max-width: calc((100% - 16px *2) / 3);
+    width: calc((100% - 16px *2) / 3);
     
+  }
+  .container-top{
+    padding: 28px 0;
+    text-align: center;
   }
 
 .top-titel-mini {
@@ -481,8 +488,7 @@ display: flex;
         letter-spacing: -0.02em;
         text-transform: uppercase;
 
-        padding: 28px 64px;
-        text-align: center;
+        
 }
 .top-img{
     
@@ -493,17 +499,7 @@ display: flex;
 
 .love-is { 
     padding-top: 120px;
-
-}
-
-.love-is-container{
-display: flex;
-      justify-content: center;
-    align-items: center;
-    gap: 28px;
-    flex-shrink: 0;
-
-margin-bottom: 50px;
+padding-bottom: 120px;
 }
 
 .love-is-titel {
@@ -515,11 +511,16 @@ margin-bottom: 50px;
         text-transform: uppercase;
 
         max-width: 268px;
-        margin: 0 auto 50px;
+        margin: 0 auto 91px;
 }
 
 .love-is-list {
-    
+  display: flex;
+   
+    gap: 28px;
+    flex-shrink: 0;
+  
+    margin-bottom: 50px;
 }
 
 .love-is-list-people {
@@ -528,7 +529,7 @@ margin-bottom: 50px;
         align-items: center;
         
         
-
+width: calc((100% - 58px) / 3);
         border-radius: 15px;
             border: 1px solid rgba(17, 17, 17, 0.10);
             background: #FFF;
@@ -563,6 +564,8 @@ max-width: 312px;
 .love-is-img{
 position: relative;
     top: -40px;
+    width: 80px;
+
 
 }
 
@@ -594,30 +597,45 @@ position: relative;
 /* ?_______FOOTER__________? */
 
 .footer {
-    padding-top: 120px;
-    
+    padding: 50px 0;
+    background-color: #1E1823;
+
 }
 .container-footer{
-background-color: #1E1823;
+display: flex;
+gap: 50px;
+position: relative;
+}
 
+.container-footer::before{
+ content: ""; 
+ display: block;
+ width: 100%;
+ bottom:-50px;
+
+ height: 1px;
+ position: absolute;
+  background-color: rgba(255, 255, 255, 0.10);
 }
 
 .footer-titel {
     color: #FFF;
-        font-family: Montserrat;
-        font-size: 28px;
+                font-size: 28px;
         font-weight: 500;
         line-height: 1.21;
         letter-spacing: -0.02em;
 
         
        
-        display: inline-flex;
-            align-items: flex-start;
-            
+       margin-right: auto;
+            max-width: 300px;
 }
 
-
+.footer-adres-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .footer-text {
     color: #FFF;
@@ -626,15 +644,13 @@ background-color: #1E1823;
         font-weight: 500;
         line-height: 1.28;
    
-        display: inline-flex;
-        align-items: flex-start;
-         margin: 0 auto;
+       
+       
+         
 }
 
 .logo-footer {
-display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;   
     gap: 14px;
     
 }
@@ -653,17 +669,67 @@ display: inline-flex;
 
 .footer-adres-list {}
 
-.footer-adres-link {}
+.footer-adres-link {
+  font-style: normal;
+  color: #FFF;
+    text-align: center;
+      font-size: 14px;
+        font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
 
-.navigation {}
 
-.navigation-footer {}
+}
 
-.navigation-footer-list {}
+.navigation-container {
+  display: flex;
+  margin-top: 74px;
+}
 
-.navigation-footer-link {}
+.navigation-footer {
+  display: flex;
+  gap: 24px;
+}
 
+.navigation-footer-list {
 
+}
+
+.navigation-footer-link {
+  color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    /* 114.286% */
+    letter-spacing: -0.03em;
+}
+
+.footer-btn{
+  margin-left: auto;
+  color: #FFF;
+    font-family:inherit;
+    font-size: 14px;
+       font-weight: 600;
+      border-radius: 100px;
+        background: #FD9222;
+    border: none;
+
+      display: flex;
+        width: 137px;
+        height: 52px;
+        padding: 17px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+}
+
+.footer-btn:hover,
+.footer-btn:focus{
+  border-radius: 100px;
+    background: #FCF1E0;
+    color: #FD9222;
+}
 
 
 
