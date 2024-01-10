@@ -177,6 +177,14 @@ background-size: cover;
   align-items: flex-start;
   gap: 14px;
   border: none;
+  cursor: pointer;
+  transition-property: background-color, border-color;
+transition-duration: 400ms, 0.3s;
+}
+
+.title-btn:hover{
+  background-color: #111;
+  border: #eceded;
 }
 
 .btn-made {
@@ -731,8 +739,7 @@ position: relative;
     font-style: normal;
     font-weight: 500;
     line-height: 1.14;
-    /* 114.286% */
-    letter-spacing: -0.03em;
+        letter-spacing: -0.03em;
 }
 
 .footer-btn{
