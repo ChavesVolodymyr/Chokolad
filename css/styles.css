@@ -141,6 +141,13 @@ span {
 
 .container-hero {
   background-color: var(--gray, #4c4c4c);
+  background-image: linear-gradient(
+    rgba(17, 17, 17, 0) 0%,
+     rgba(17, 17, 17, 0.4)), 
+  url(../img/chocolate_main1111111-min.jpg);
+  background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
   border-radius: 30px;
   padding: 380px 40px 40px 40px;
 }
@@ -357,7 +364,25 @@ span {
   gap: 20px;
 }
 .made-list {
+  display: flex;
+  align-items: baseline;
+  /* position: ; */
+  gap: 8px;
+
   margin-bottom: 24px;
+}
+
+
+
+.made-list::before{
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #111111;
+  border-radius: 50%;
+  border: 1px solid #eceded;
+  flex-shrink: 0;
 }
 /* !!!!!!!!!!!!!!!!!!!! */
 /* ?_________PRODUCTS___________? */
