@@ -206,6 +206,11 @@ background-size: cover;
   align-items: center;
 }
 
+.header-soc-icon{
+  fill: transparent;
+  stroke: #111;
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* ?_____________Fitures__________________? */
 .fitures-section {
