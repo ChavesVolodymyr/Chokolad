@@ -63,9 +63,6 @@ span {
   padding-bottom: 32px;
 }
 
-.header-section {
-}
-
 .container-header {
   display: flex;
   gap: 90px;
@@ -114,9 +111,6 @@ span {
   align-items: center;
 }
 
-.logo-menu {
-}
-
 .logo-menu-list {
   color: #111;
   font-size: 14px;
@@ -126,12 +120,17 @@ span {
 }
 
 .logo-menu-list:hover,
-.logo-menu-list:focus,
-.logo-menu-list:active {
+.logo-menu-list:focus {
   color: #fd9222;
 }
 
-.header-soc-link {
+.header-soc-icon {
+  fill: transparent;
+  stroke: #111;
+}
+.header-soc-icon:hover {
+fill: transparent;
+  stroke: #fd9222;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* ?_____________HERO______________? */
@@ -178,13 +177,14 @@ background-size: cover;
   gap: 14px;
   border: none;
   cursor: pointer;
-  transition-property: background-color, border-color;
-transition-duration: 400ms, 0.3s;
+  transition-property: background-color, border;
+transition-duration: 600ms, 0.5s;
 }
 
 .title-btn:hover{
-  background-color: #111;
-  border: #eceded;
+  background-color: #FCF1E0;
+  border: #FD9222;
+  color: #FD9222;
 }
 
 .btn-made {
@@ -198,7 +198,17 @@ transition-duration: 400ms, 0.3s;
   background-color: transparent;
   padding: 14px 40px;
   margin-left: 14px;
+
+  transition-property: border, color;
+transition-duration: 600ms, 0.5s;
+transition-timing-function: cubic-bezier(.73, .72, .34, .98);
 }
+
+.btn-made:hover{
+border: 1px solid #FD9222;
+  color: #FD9222;
+} 
+
 
 .btn-scroll {
   color: #fff;
@@ -207,6 +217,17 @@ transition-duration: 400ms, 0.3s;
   line-height: 1.29;
   letter-spacing: -0.03em;
   margin-left: auto;
+  padding-right: 14px;
+}
+
+.hero-icon{
+  background-color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
 }
 
 .display-btn {
@@ -214,38 +235,56 @@ transition-duration: 400ms, 0.3s;
   align-items: center;
 }
 
-.header-soc-icon{
-  fill: transparent;
-  stroke: #111;
-}
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* ?_____________Fitures__________________? */
 .fitures-section {
   background-color: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.visually-hidden {
-}
 
 .fitures-style {
   display: flex;
-  width: 1200px;
-  padding: 50px;
-  justify-content: center;
-  align-items: flex-start;
+ padding-left: 18px;
+ padding-right: 18px;
   gap: 88px;
 }
 
 .fitures-list {
   width: calc((100% - 88px * 2) / 3);
+  position: relative;
 }
 
+.fitures-list:not(:last-child)::after{
+  content: "";
+  width: 1px;
+  height: 124px;
+   background-color: #4c4c4c;
+  position: absolute;
+  right: -44px;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fituters-icon{
+  border-radius: 365px;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    display: flex;
+      width: 62px;
+      height: 62px;
+    justify-content: center;
+      align-items: center;
+}
 .fitures-titel {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 18px;
+  margin-top: 22px;
 }
 
 .fitures-text {
@@ -379,13 +418,10 @@ transition-duration: 400ms, 0.3s;
 .made-list {
   display: flex;
   align-items: baseline;
-  /* position: ; */
-  gap: 8px;
+   gap: 8px;
 
   margin-bottom: 24px;
 }
-
-
 
 .made-list::before{
   content: "";
@@ -513,6 +549,37 @@ display: flex;
     width: calc((100% - 16px *2) / 3);
     
   }
+
+    .top-list:hover .sellers-top-wrap{
+      transform: translateY(0%);
+    }
+
+    .sellers-top-container{
+position: relative;
+overflow: hidden;
+    }
+
+.sellers-top-wrap{
+position: absolute;
+top: 0;
+border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(165deg, rgba(253, 253, 255, 0.10) 3.97%, rgba(8, 2, 21, 0.00) 109.76%);
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  align-items: center;
+ padding: 0 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 500ms linear;
+}
+
+.sellers-top-text{
+  color: #fafafa;
+  font-size: 14px;
+  line-height: 1.28;
+    letter-spacing: -0.02em;
+}
+
   .container-top{
     padding: 28px 0;
     text-align: center;
@@ -528,9 +595,7 @@ display: flex;
 
         
 }
-.top-img{
-    
-}
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* ?_________LOVE_IS_____________? */
