@@ -101,6 +101,11 @@ span {
   gap: 4px;
 }
 
+.logo-container{
+  display: flex;
+gap: 4px;
+}
+
 .header-soc-item {
   display: flex;
   gap: 14px;
