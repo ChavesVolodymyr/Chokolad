@@ -856,6 +856,12 @@ span {
   background-color: rgba(46, 44, 47, 0.5);
 }
 
+.is-open{
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: auto;
+}
+
 .modal {
   width: 517px;
   min-height: 794px;
